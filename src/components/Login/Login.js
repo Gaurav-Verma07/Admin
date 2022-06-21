@@ -43,7 +43,7 @@ const Login = () => {
           formik.setFieldValue('email', '');
           formik.setFieldValue('password', '');
           setIsNewUser(!false);
-          navigate('/new-user');
+          navigate('/Admin/new-user');
         } else {
           return res.json().then((data) => {
             alert(data.error.message);
@@ -67,7 +67,7 @@ const Login = () => {
       ).then((res) => {
         if (res.ok) {
           console.log(res);
-          navigate('/dashboard');
+          navigate('/Admin/dashboard');
         } else {
           return res.json().then((data) => {
             console.log(data);
