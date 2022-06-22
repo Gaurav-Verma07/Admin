@@ -57,7 +57,7 @@ const NewUser = () => {
     }).then((res) => {
       console.log(res);
     });
-    navigate('/Admin');
+    navigate('/');
     adminCtx.newuser();
   };
 
