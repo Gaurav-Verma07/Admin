@@ -9,7 +9,7 @@ import { routes } from './constants/routes';
 
 function App() {
   return (
-    <BrowserRouter basename={routes.DEFAULT} >
+    <BrowserRouter >
       <AdminProvider>
         <Routes>
           <Route path={routes.HOME} element={<Login />} />
