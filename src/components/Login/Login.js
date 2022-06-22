@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import clsx from 'clsx';
+import { routes } from '../../constants/routes';
 
 const Login = () => {
   const [isNewUser, setIsNewUser] = useState(false);
@@ -43,7 +44,7 @@ const Login = () => {
           formik.setFieldValue('email', '');
           formik.setFieldValue('password', '');
           setIsNewUser(!false);
-          navigate('/new-user');
+          navigate(routes.NEW_USER);
         } else {
           return res.json().then((data) => {
             alert(data.error.message);
@@ -67,7 +68,7 @@ const Login = () => {
       ).then((res) => {
         if (res.ok) {
           console.log(res);
-          navigate('/dashboard');
+          navigate(routes.DASHBOARD);
         } else {
           return res.json().then((data) => {
             console.log(data);

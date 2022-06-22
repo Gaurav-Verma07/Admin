@@ -6,6 +6,7 @@ import { designation } from '../../constants/designation';
 import { getDate, nextID } from '../../utils/nextId';
 import { useContext, useEffect } from 'react';
 import AdminContext from '../../store/admin-context';
+import { routes } from '../../constants/routes';
 
 const NewUser = () => {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ const NewUser = () => {
     }).then((res) => {
       console.log(res);
     });
-    navigate('/');
+    navigate(routes.HOME);
     adminCtx.newuser();
   };
 
